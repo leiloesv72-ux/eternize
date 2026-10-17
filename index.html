@@ -1,14 +1,74 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Éternize | Entrar</title>
-  <meta http-equiv="refresh" content="0; url=login.html">
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .login {
+      width: 100%;
+      max-width: 380px;
+      padding: 30px;
+      background: white;
+      border: 1px solid #ead8c7;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .login input {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #d6bca9;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .login button {
+      width: 100%;
+    }
+
+    .login a {
+      color: #762d43;
+    }
+  </style>
 </head>
 <body>
-  <p>Abrindo o Éternize...</p>
-  <a href="login.html">Clique aqui se a página não abrir.</a>
+  <form class="login" onsubmit="entrar(event)">
+    <a class="logo" href="index.html">Éternize</a>
+    <h2>Controle de acesso</h2>
+    <p>Entre para ver nossos presentes.</p>
+
+    <input id="email" type="email"
+      placeholder="Seu e-mail" required>
+
+    <input id="senha" type="password"
+      placeholder="Sua senha" required>
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script>
+    function entrar(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value;
+      localStorage.setItem('eternizeUsuario', email.split('@')[0]);
+
+      alert('Login realizado com sucesso!');
+      window.location.href = 'paginaprincip.html';
+    }
+  </script>
 </body>
 </html>
