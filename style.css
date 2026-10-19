@@ -1,4 +1,4 @@
-/* Estilo simples inspirado nas telas do Figma */
+
 * { box-sizing: border-box; }
 body { margin: 0; background: #8c2d39; color: #fff; font-family: Arial, sans-serif; }
 button, input { font: inherit; }
@@ -25,7 +25,7 @@ main { width: 94%; margin: auto; }
 .caixa { width: 100%; max-width: 420px; max-height: 80vh; overflow: auto; padding: 22px; background: #fff8ef; color: #45232c; border-radius: 8px; }
 .fechar { float: right; background: #8c2d39; color: white; }
 footer { margin-top: 25px; padding: 20px; text-align: center; background: #f0d1a8; color: #45232c; }
-/* Tela de login */
+
 .login-page { min-height: 100vh; display: grid; place-items: center; padding: 25px; }
 .login-card { width: min(900px, 100%); min-height: 565px; display: grid; grid-template-columns: 1fr 1fr; background: white; color: #222; }
 .login-form { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 35px; }
