@@ -1,2 +1,0 @@
-# eternize
-site eternize senai 
